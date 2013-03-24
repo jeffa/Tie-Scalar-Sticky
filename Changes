@@ -1,0 +1,14 @@
+Revision history for Perl extension Tie::Scalar::Sticky.
+
+1.08  Mar 23 2013 - built with Module::Starter
+                  - added to github
+
+1.06  Jan 01 2004 - doc updates
+
+1.04  Aug 14 2003 - applied broquaint's patch
+                      - rejects user supplied strings
+
+1.02  Aug 13 2003 - can't be set empty string now
+
+1.00  Aug 12 2003 - first version
+
