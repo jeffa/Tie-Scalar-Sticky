@@ -3,28 +3,28 @@ package Tie::Scalar::Sticky;
 use strict;
 use warnings;
 use vars qw($VERSION);
-$VERSION = '1.08';
+$VERSION = '1.09';
 
 use Symbol;
 use Tie::Scalar;
 use base 'Tie::StdScalar';
 
 sub TIESCALAR {
-	my $class = shift;
-	my $self = *{gensym()};
-	@$self = ('',@_);
-	return bless \$self, $class;
+    my $class = shift;
+    my $self = *{gensym()};
+    @$self = ('',@_);
+    return bless \$self, $class;
 }
 
 sub STORE {
-	my($self,$val) = @_;
-	return unless defined $val;
-	$$$self = $val unless grep $val eq $_, @$$self;
+    my($self,$val) = @_;
+    return unless defined $val;
+    $$$self = $val unless grep $val eq $_, @$$self;
 }
 
 sub FETCH {
-	my $self = shift;
-	return $$$self;
+    my $self = shift;
+    return $$$self;
 }
 
 qw(jeffa);
@@ -37,22 +37,22 @@ Tie::Scalar::Sticky - Block assignments to scalars
 
 =head1 SYNOPSIS
 
-   use strict;
-   use Tie::Scalar::Sticky;
+ use strict;
+ use Tie::Scalar::Sticky;
 
-   tie my $sticky, 'Tie::Scalar::Sticky';
+ tie my $sticky, 'Tie::Scalar::Sticky';
 
-   $sticky = 42;
-   $sticky = '';       # still 42
-   $sticky = undef;    # still 42
-   $sticky = 0;        # now it's zero
+ $sticky = 42;
+ $sticky = '';       # still 42
+ $sticky = undef;    # still 42
+ $sticky = 0;        # now it's zero
 
-   tie my $sticky, 'Tie::Scalar::Sticky' => qw/ foo bar /;
+ tie my $sticky, 'Tie::Scalar::Sticky' => qw/ foo bar /;
 
-   $sticky = 42;
-   $sticky = 'foo';    # still 42
-   $sticky = 'bar';    # still 42
-   $sticky = 0;        # now it's zero
+ $sticky = 42;
+ $sticky = 'foo';    # still 42
+ $sticky = 'bar';    # still 42
+ $sticky = 0;        # now it's zero
 
 =head1 DESCRIPTION
 
@@ -61,7 +61,7 @@ of undef or the empty string or any of the extra arugments
 provided to C<tie()>. It simply removes the need for
 you to validate assignments, such as:
 
-   $var = $val unless grep $val eq $_, qw(not one of these);
+ $var = $val unless grep $val eq $_, qw(not one of these);
 
 Actually, that is the exact idea used in this module ...
 
@@ -69,11 +69,11 @@ So, why do this? Because i recently had to loop through a
 list where some items were undefined and the previously
 defined value should be used instead. In a nutshell:
 
-   tie my $sticky, 'Tie::Scalar::Sticky' => 9, 'string';
-   for (3,undef,'string',2,'',1,9,0) {
-      $sticky = $_;
-      print $sticky, ' ';
-   }
+ tie my $sticky, 'Tie::Scalar::Sticky' => 9, 'string';
+ for (3,undef,'string',2,'',1,9,0) {
+    $sticky = $_;
+    print $sticky, ' ';
+ }
 
 Should print: 3 3 2 2 1 0
 
