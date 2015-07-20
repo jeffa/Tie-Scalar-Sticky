@@ -1,6 +1,7 @@
 Revision history for Perl extension Tie::Scalar::Sticky.
 
 1.09
+    - corrected perl-5.8.9 reference count "got screwed up"
     - tabs to spaces
 
 1.08 

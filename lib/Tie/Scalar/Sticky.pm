@@ -27,6 +27,11 @@ sub FETCH {
     return $$$self;
 }
 
+sub DESTROY {
+    my $self = shift;
+    undef $$$self;
+}
+
 qw(jeffa);
 
 =pod
