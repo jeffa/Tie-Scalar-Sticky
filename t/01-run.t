@@ -2,11 +2,9 @@
 use 5.006;
 use strict;
 use warnings FATAL => 'all';
-use Test::More tests => 17;
+use Test::More tests => 16;
 
-BEGIN {
-    use_ok( 'Tie::Scalar::Sticky' ) || print "Bail out!\n";
-}
+use Tie::Scalar::Sticky;
 
 tie my $sticky, 'Tie::Scalar::Sticky';
 

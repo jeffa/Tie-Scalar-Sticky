@@ -2,12 +2,6 @@
 use 5.006;
 use strict;
 use warnings FATAL => 'all';
-use Test::More;
+use Test::More tests => 1;
 
-plan tests => 1;
-
-BEGIN {
-    use_ok( 'Tie::Scalar::Sticky' ) || print "Bail out!\n";
-}
-
-diag( "Testing Tie::Scalar::Sticky $Tie::Scalar::Sticky::VERSION, Perl $], $^X" );
+use_ok( 'Tie::Scalar::Sticky' ) or BAIL_OUT( "can't use module" );
