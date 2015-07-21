@@ -127,14 +127,13 @@ Jeff Anderson, C<< <jeffa at cpan.org> >>
 
 =head1 CREDITS 
 
-Dan [broquaint] Brook
- Dan added support for user-defined strings by changing
- $self to a glob. His patch was applied to Version 1.02
- verbatim, i later 'simplified' the code by assuming that
- undef and the empty strings (the only two items Version
- 1.00 will block) are already waiting inside @$$self.
- Dan then removed undef from @$$self, and i added a simple
- check that returns from STORE unless $val is defined.
+Dan Brook added support for user-defined strings by changing
+C<$self> to a glob. His patch was applied to Version 1.02
+verbatim, i later 'simplified' the code by assuming that
+undef and the empty strings (the only two items Version
+1.00 will block) are already waiting inside C<@$$self>.
+Dan then removed undef from C<@$$self>, and i added a simple
+check that returns from STORE unless $val is defined.
 
 =head1 COPYRIGHT
 
