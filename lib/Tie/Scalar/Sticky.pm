@@ -88,7 +88,7 @@ Please report any bugs or feature requests to either
 
 =over 4
 
-=item * Email: C<bug-spreadsheet-html at rt.cpan.org>
+=item * Email: C<bug-tie-scalar-sticky at rt.cpan.org>
 
 =item * Web: L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tie-Scalar-Sticky>
 
@@ -105,7 +105,7 @@ The Github project is L<https://github.com/jeffa/Tie-Scalar-Sticky>
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Spreadsheet::HTML
+    perldoc Tie::Scalar::Sticky
 
 You can also look for information at:
 
