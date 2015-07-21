@@ -1,6 +1,7 @@
 Revision history for Perl extension Tie::Scalar::Sticky.
 
 1.10
+    - moved non-dist tests out of dist
     - updated meta data (license, contact, etc.)
 
 1.09
