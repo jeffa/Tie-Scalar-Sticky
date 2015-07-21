@@ -133,7 +133,7 @@ verbatim, i later 'simplified' the code by assuming that
 undef and the empty strings (the only two items Version
 1.00 will block) are already waiting inside C<@$$self>.
 Dan then removed undef from C<@$$self>, and i added a simple
-check that returns from STORE unless $val is defined.
+check that returns from C<STORE> unless C<$val> is defined.
 
 =head1 COPYRIGHT
 
