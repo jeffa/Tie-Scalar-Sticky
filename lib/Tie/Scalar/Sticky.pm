@@ -80,24 +80,50 @@ defined value should be used instead. In a nutshell:
     print $sticky, ' ';
  }
 
-Should print: 3 3 2 2 1 0
+should print: 3 3 2 2 1 0
 
-=head1 BUGS
+=head1 BUGS AND LIMITATIONS
 
-If you have found a bug, typo, etc. please visit Best Practical Solution's
-CPAN bug tracker at http://rt.cpan.org:
+Please report any bugs or feature requests to either
 
-E<lt>http://rt.cpan.org/NoAuth/Bugs.html?Dist=Tie-Scalar-StickyE<gt>
+=over 4
 
-or send mail to E<lt>bug-Tie-Scalar-Sticky#rt.cpan.orgE<gt>
+=item * Email: C<bug-spreadsheet-html at rt.cpan.org>
 
-(you got this far ... you can figure out how to make that
-a valid address ... and note that i won't respond to bugs
-sent to my personal address any longer)
+=item * Web: L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tie-Scalar-Sticky>
+
+=back
+
+I will be notified, and then you'll automatically be notified of progress
+on your bug as I make changes.
+
+=head1 GITHUB
+
+The Github project is L<https://github.com/jeffa/Tie-Scalar-Sticky>
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc Spreadsheet::HTML
+
+You can also look for information at:
+
+=over 4
+
+=item * RT: CPAN's request tracker (report bugs here) L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Tie-Scalar-Sticky>
+
+=item * AnnoCPAN: Annotated CPAN documentation L<http://annocpan.org/dist/Tie-Scalar-Sticky>
+
+=item * CPAN Ratings L<http://cpanratings.perl.org/d/Tie-Scalar-Sticky>
+
+=item * Search CPAN L<http://search.cpan.org/dist/Tie-Scalar-Sticky>
+
+=back
 
 =head1 AUTHOR 
 
-Jeff Anderson
+Jeff Anderson, C<< <jeffa at cpan.org> >>
 
 =head1 CREDITS 
 
@@ -109,8 +135,6 @@ Dan [broquaint] Brook
  1.00 will block) are already waiting inside @$$self.
  Dan then removed undef from @$$self, and i added a simple
  check that returns from STORE unless $val is defined.
-
-PerlMonks for the education.
 
 =head1 COPYRIGHT
 

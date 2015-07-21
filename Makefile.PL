@@ -5,10 +5,10 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME             => 'Tie::Scalar::Sticky',
-    AUTHOR           => q{jeffa <info+cpan@unlocalhost.com>},
+    AUTHOR           => q{Jeff Anderson <jeffa@cpan.org>},
     VERSION_FROM     => 'lib/Tie/Scalar/Sticky.pm',
     ABSTRACT_FROM    => 'lib/Tie/Scalar/Sticky.pm',
-    LICENSE          => 'Artistic_2_0',
+    LICENSE          => 'artistic_2',
     PL_FILES         => {},
     MIN_PERL_VERSION => 5.006,
     CONFIGURE_REQUIRES => {
@@ -19,9 +19,16 @@ WriteMakefile(
     },
     PREREQ_PM => {
         'Tie::Scalar' => undef,
-        #'ABC'              => 1.6,
-        #'Foo::Bar::Module' => 5.0401,
     },
+    (! eval { ExtUtils::MakeMaker->VERSION(6.46) } ? () :
+        (META_ADD => {
+            resources => {
+                homepage   => 'https://github.com/jeffa/Tie-Scalar-Sticky',
+                repository => 'https://github.com/jeffa/Tie-Scalar-Sticky.git',
+                bugtracker => 'https://github.com/jeffa/Tie-Scalar-Sticky/issues',
+            },
+        })
+    ),
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'Tie-Scalar-Sticky-*' },
 );
