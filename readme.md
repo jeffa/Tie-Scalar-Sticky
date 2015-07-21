@@ -1,20 +1,52 @@
-NAME
-    Tie::Scalar::Sticky
+Tie-Scalar-Sticky
+=================
+Block assignments to scalars
 
-INSTALL
-    Installation as usual:
+Synopsis
+--------
+```perl
+use strict;
+use Tie::Scalar::Sticky;
 
-        perl Makefile.PL
-        make
-        make test
-        make install
+tie my $sticky, 'Tie::Scalar::Sticky';
 
-DESCRIPTION
-    See perldoc Tie::Scalar::Sticky
+$sticky = 42;
+$sticky = '';       # still 42
+$sticky = undef;    # still 42
+$sticky = 0;        # now it's zero
 
-AUTHOR
-    Jeff Anderson
+tie my $sticky, 'Tie::Scalar::Sticky' => qw/ foo bar /;
 
-COPYRIGHT
-    Copyright (c) 2013 Jeff Anderson.
-	See source POD for additional copyright information.
+$sticky = 42;
+$sticky = 'foo';    # still 42
+$sticky = 'bar';    # still 42
+$sticky = 0;        # now it's zero
+```
+
+Installation
+------------
+To install this module, you should use CPAN. A good starting
+place is [How to install CPAN modules](http://www.cpan.org/modules/INSTALL.html).
+
+If you truly want to install from this github repo, then
+be sure and create the manifest before you test and install:
+```
+perl Makefile.PL
+make
+make manifest
+make test
+make install
+```
+
+Support and Documentation
+-------------------------
+After installing, you can find documentation for this module with the
+perldoc command.
+```
+perldoc Tie::Scalar::Sticky
+```
+You can also find documentation at [metaCPAN](https://metacpan.org/pod/Tie::Scalar::Sticky).
+
+License and Copyright
+---------------------
+See [source POD](/lib/Tie/Scalar/Sticky.pm).
