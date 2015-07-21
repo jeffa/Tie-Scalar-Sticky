@@ -2,8 +2,7 @@ package Tie::Scalar::Sticky;
 
 use strict;
 use warnings;
-use vars qw($VERSION);
-$VERSION = '1.10';
+our $VERSION = '1.11';
 
 use Symbol;
 use Tie::Scalar;

@@ -1,5 +1,7 @@
 Revision history for Perl extension Tie::Scalar::Sticky.
 
+1.11
+
 1.10
     - require Scalar::Util (old perls)
     - moved non-dist tests out of dist
