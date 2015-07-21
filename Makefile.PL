@@ -18,7 +18,8 @@ WriteMakefile(
         'Test::More' => 0,
     },
     PREREQ_PM => {
-        'Tie::Scalar' => undef,
+        'Scalar::Util' => undef,
+        'Tie::Scalar'  => undef,
     },
     (! eval { ExtUtils::MakeMaker->VERSION(6.46) } ? () :
         (META_ADD => {
