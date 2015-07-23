@@ -1,6 +1,6 @@
 Tie-Scalar-Sticky
 =================
-Block assignments to scalars
+Just another scalar assignment blocker.
 
 Synopsis
 --------
