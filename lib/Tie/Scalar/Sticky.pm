@@ -38,7 +38,7 @@ qw(jeffa);
 
 =head1 NAME
 
-Tie::Scalar::Sticky - Block assignments to scalars
+Tie::Scalar::Sticky - Just another scalar assignment blocker.
 
 =head1 SYNOPSIS
 
