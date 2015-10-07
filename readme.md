@@ -1,6 +1,6 @@
 Tie-Scalar-Sticky
 =================
-Just another scalar assignment blocker.
+Just another scalar assignment blocker. [![CPAN version](https://badge.fury.io/pl/Tie-Scalar-Sticky.svg)](https://badge.fury.io/pl/Tie-Scalar-Sticky)
 
 Synopsis
 --------
