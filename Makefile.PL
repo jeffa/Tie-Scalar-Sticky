@@ -25,7 +25,6 @@ WriteMakefile(
             resources => {
                 homepage   => 'https://github.com/jeffa/Tie-Scalar-Sticky',
                 repository => 'https://github.com/jeffa/Tie-Scalar-Sticky.git',
-                bugtracker => 'https://github.com/jeffa/Tie-Scalar-Sticky/issues',
             },
         })
     ),

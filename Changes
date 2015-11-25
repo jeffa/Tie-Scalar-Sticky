@@ -1,6 +1,7 @@
 Revision history for Perl extension Tie::Scalar::Sticky.
 
 1.12
+    - fix bug tracker location
 
 1.11
     - updated slug
