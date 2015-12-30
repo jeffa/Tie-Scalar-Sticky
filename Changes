@@ -1,5 +1,7 @@
 Revision history for Perl extension Tie::Scalar::Sticky.
 
+1.13
+
 1.12
     - update copyright date
     - fix bug tracker location
